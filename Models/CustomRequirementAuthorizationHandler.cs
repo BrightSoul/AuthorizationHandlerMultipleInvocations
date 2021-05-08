@@ -8,8 +8,7 @@ namespace AuthorizationHandlerMultipleInvocations.Models
     {
         protected override Task HandleRequirementAsync(AuthorizationHandlerContext context, CustomRequirement requirement)
         {
-            // Put a breakpoint here
-            // This gets called twice.
+            // Put a breakpoint on the following line, it gets called twice
             // First time with a context.Resource of type Microsoft.AspNetCore.Http.DefaultHttpContext
             // Second time with a context.Resource of type Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.AuthorizationFilterContextSealed
             context.Succeed(requirement);
